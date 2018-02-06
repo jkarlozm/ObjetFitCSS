@@ -1,0 +1,44 @@
+body{
+	background: #222;
+	font-family: monospace;
+}
+
+.titulo{
+	color: white;
+	text-align: center;
+}
+
+/*Propiedades de Flex box*/
+.contenedor-galeria{
+	display: flex; /*para que el contenido este aun lado del otro*/
+	width: 100%;
+	justify-content: space-around; /*Para que se tenga un espacio entre imagen e imagen*/
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.galeria__img{
+	width: 300px;
+	height: 200px;
+	margin-bottom: 30px;
+	/*Propiedad parecida al background (contain, cover, fill, none, scale-down)*/
+	/*Fill: La imagen ocuprar todo el ancho y alto especificado*/
+	/*Contain: La imagen se trata de adaptar al ancho y alto del contenedor*/
+	object-fit: cover;
+	filter: brightness(70%);
+	animation: escalar 1.5s infinite alternate;
+}
+
+.galeria__img{
+	filter: brightness(100%);
+}
+
+@keyframes escalar{
+	to{
+		transform: scale(1);
+	}
+	from{
+		transform: scale(1.1);
+	}
+}
